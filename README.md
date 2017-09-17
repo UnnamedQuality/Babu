@@ -1,2 +1,6 @@
 # babu
-The babu creators.
+Welcome to Babu!
+
+Website:
+
+Developers: vcxiz and ckchoudek
