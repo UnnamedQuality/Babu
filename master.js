@@ -15,6 +15,7 @@ const token = '';
 // from Discord _after_ ready is emitted
 client.on('ready', () => {
   console.log('Babu has loaded.');
+  client.user.setPresence({ game: { name: 'https://unnamedquality.github.io/babu/', type: 0 } });
 });
 
 // Create an event listener for messages
