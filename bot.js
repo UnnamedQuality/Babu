@@ -6,8 +6,9 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'b!ping') {
-    	message.reply('pong');
+    if (message.content === 'ping') {
+        const then = Date.now();
+    	message.reply('Pong! It took $[Date.now() - then] to ping you.');
   	}
 });
 
