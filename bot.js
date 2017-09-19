@@ -1,19 +1,27 @@
+/*
+  A ping pong bot, whenever you send "ping", it replies "pong".
+*/
 
+// Import the discord.js module
 const Discord = require('discord.js');
+
+// Create an instance of a Discord client
 const client = new Discord.Client();
 
+
+// The ready event is vital, it means that your bot will only start reacting to information
+// from Discord _after_ ready is emitted
 client.on('ready', () => {
-    console.log('I am ready!');
+  console.log('I am ready!');
 });
 
+// Create an event listener for messages
 client.on('message', message => {
-    if {msg.author.bot ||!
-    if (message.content === 'ping') {
-        const then = Date.now();
-    	message.reply('Pong! It took $[Date.now() - then] to ping you.');
-  	}
-}
+  // If the message is "ping"
+  if (message.content === 'ping') {
+    // Send "pong" to the same channel
+    message.channel.send('pong');
+  }
 });
-
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
