@@ -58,8 +58,9 @@ client.on('message', message => {
      message.author.sendMessage("illuminavi - ILLUMINAVI!!")
  
    }
-  if (message.content === "b!illuminavi") then {
-    message.channel.send("😧 ILLUMINAVI CONFIRMED! https://i.imgur.com/92wjqvK.png")
+  if (message.content === "b!illuminavi") {
+    message.react("😧")
+    message.channel.send("ILLUMINAVI CONFIRMED! https://i.imgur.com/92wjqvK.png")
 }
 
 });
