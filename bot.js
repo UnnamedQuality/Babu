@@ -1,4 +1,4 @@
-/*
+ /*
   A ping pong bot, whenever you send "ping", it replies "pong".
 */
 
@@ -22,6 +22,9 @@ client.on('message', message => {
     // Send "pong" to the same channel
     message.channel.send('Pong!');
   }
+   if (message.content === 'b!help') {
+     message.author.sendMessage("Help currently WIP!")
+   }
 });
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
