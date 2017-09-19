@@ -2,9 +2,9 @@
   "name": "Babu",
   "description": "Babu. The best bot yet.",
   "version": "0.0.9",
-  "main": "bot.js",
+  "main": "master.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node master.js"
   },
   "dependencies": {
     "discord.js": "11.1.0",
