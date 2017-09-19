@@ -18,9 +18,9 @@ client.on('ready', () => {
 // Create an event listener for messages
 client.on('message', message => {
   // If the message is "ping"
-  if (message.content === 'ping') {
+  if (message.content === 'b!ping') {
     // Send "pong" to the same channel
-    message.channel.send('pong');
+    message.channel.send('Pong!');
   }
 });
 // THIS  MUST  BE  THIS  WAY
