@@ -47,7 +47,7 @@ client.on('message', message => {
   }
 
    if (message.content === 'b!help') {
-     message.channel.reply('sending help! Please check your DMs. 👍')
+     message.channel.reply('sending help! Please check your DMs. :thumbs-up:')
      message.author.sendMessage("**Babu commands: **")
     message.author.sendMessage("The prefix for Babu is b!")
     message.author.sendMessage("help - Commands and help.")
