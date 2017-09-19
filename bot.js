@@ -1,4 +1,5 @@
-  /*
+
+/*
 
   A ping pong bot, whenever you send "ping", it replies "pong".
 
@@ -53,6 +54,7 @@ client.on('message', message => {
     message.author.sendMessage("help - Commands and help.")
     message.author.sendMessage("hq - Sends a DM with an invite to the Babu discord.")
      message.author.sendMessage("ping - Classics.")
+     message.author.sendMessage("illuminavi - ILLUMINAVI!!")
  
    }
 
