@@ -59,8 +59,7 @@ client.on('message', message => {
  
    }
   if (message.content === "b!illuminavi") then {
-    message.react("😧")
-    message.channel.send("ILLUMINAVI CONFIRMED! https://i.imgur.com/92wjqvK.png")
+    message.channel.send("😧 ILLUMINAVI CONFIRMED! https://i.imgur.com/92wjqvK.png")
 }
 
 });
