@@ -68,7 +68,6 @@ client.on('message', message => {
       }
   if (message.content === "b!abuintro") {
     message.channel.send("Oh, it is my turn to preform? Well, thank you!\n Hello! I am Babu, real name Jen. This is my showroom, where I am supposed to preform!\n Say b!community to view community commands, for this server only. Thank you! 🔥")
-    client.deleteMessage(message)
   }
 
 });
