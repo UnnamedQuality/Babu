@@ -67,7 +67,7 @@ client.on('message', message => {
   message.react("🔥")
   }
   if (message.content === "b!hello") {
-    message.channel.send("Hi.. I am sleepy today... Nervous for next preformance..")
+  message.channel.send("Hi.. I am sleepy today... Nervous for next preformance..")
   }
 
 });
