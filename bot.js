@@ -1,4 +1,5 @@
 
+
 /*
 
   A ping pong bot, whenever you send "ping", it replies "pong".
@@ -65,7 +66,10 @@ client.on('message', message => {
   if (message.content === "b!hello") {
     message.channel.send("Hi, I am Jen, alias Babu. I am here to preform commands for you! I was set to preform by Carson Houdek and lua_html.")
       }
-
+  if (message.content === "b!abuintro") {
+    message.channel.send("Oh, it is my turn to preform? Well, thank you!\n Hello! I am Babu, real name Jen. This is my showroom, where I am supposed to preform!\n Say b!community to view community commands, for this server only. Thank you! 🔥")
+    client.deleteMessage(message)
+  }
 
 });
 
