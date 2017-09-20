@@ -1,6 +1,4 @@
 
-i
-
 /*
 
   A ping pong bot, whenever you send "ping", it replies "pong".
@@ -57,12 +55,16 @@ client.on('message', message => {
     message.author.sendMessage("hq - Sends a DM with an invite to the Babu discord.")
      message.author.sendMessage("ping - Classics.")
      message.author.sendMessage("illuminavi - ILLUMINAVI!!")
+     message.author.sendMessage("hello - Why can't I introduce myself?")
  
    }
   if (message.content === "b!illuminavi") {
     message.react("😧")
     message.channel.send("ILLUMINAVI CONFIRMED! https://i.imgur.com/92wjqvK.png")
 }
+  if (message.content === "b!hello") {
+    message.channel.send("Hi, I am Jen, alias Babu. I am here to preform commands for you! I was set to preform by Carson Houdek and lua_html.")
+      }
 
 
 });
