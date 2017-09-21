@@ -49,6 +49,7 @@ client.on('message', message => {
   }
 
    if (message.content === 'b!help') {
+     message.react("👌")
      message.channel.send('I am sending help your way! Please check your DMs. 👍')
      message.author.sendMessage("**Babu commands: **")
     message.author.sendMessage("The prefix for Babu is b!")
@@ -74,7 +75,9 @@ client.on('message', message => {
   if (message.content === "b!abuintro") {
     message.channel.send("Oh, it is my turn to preform? Well, thank you!\n Hello! I am Babu, real name Jen. This is my showroom, where I am supposed to preform!\n Say b!community to view community commands, for this server only. Thank you! 🔥")
   }
-
+  if (message.content === "b!react") {
+    message.react("😂")
+  }
 });
 
 // THIS  MUST  BE  THIS  WAY
