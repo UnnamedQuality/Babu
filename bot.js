@@ -53,7 +53,7 @@ client.on('message', message => {
      message.author.sendMessage("**Babu commands: **")
     message.author.sendMessage("The prefix for Babu is b!")
     message.author.sendMessage("help - Commands and help.")
-    message.author.sendMessage("hq - Sends a DM with an invite to the Babu discord.")
+    message.author.sendMessage("hq - Sends a DM with an invite to the CarLua and UQ discords.")
      message.author.sendMessage("ping - Classics.")
      message.author.sendMessage("illuminavi - ILLUMINAVI!!")
      message.author.sendMessage("hello - Why can't I introduce myself?")
@@ -65,6 +65,11 @@ client.on('message', message => {
 }
   if (message.content === "b!hello") {
     message.channel.send("Hi, I am Jen, alias Babu. I am here to preform commands for you! I was set to preform by Carson Houdek and lua_html.")
+      }
+  if (message.content === "b!hq") {
+    message.react("🔥")
+    message.author.sendMessage("**CarLua HQ:** https://discord.gg/aKKwVEG")
+    message.author.sendMessage("**UnnamedQuality:** https://discord.gg/c4yGwuQ")
       }
   if (message.content === "b!abuintro") {
     message.channel.send("Oh, it is my turn to preform? Well, thank you!\n Hello! I am Babu, real name Jen. This is my showroom, where I am supposed to preform!\n Say b!community to view community commands, for this server only. Thank you! 🔥")
