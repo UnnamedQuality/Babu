@@ -58,6 +58,7 @@ client.on('message', message => {
      message.author.sendMessage("ping - Classics.")
      message.author.sendMessage("illuminavi - ILLUMINAVI!!")
      message.author.sendMessage("hello - Why can't I introduce myself?")
+     message.author.sendMessage("react - 🤔")
  
    }
   if (message.content === "b!illuminavi") {
