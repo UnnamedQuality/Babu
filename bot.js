@@ -44,13 +44,13 @@ client.on('message', message => {
 
     // Send "pong" to the same channel
 
-    message.channel.send('Pong!');
+    message.reply('pong!');
 
   }
 
    if (message.content === 'b!help') {
      message.react("👌")
-     message.channel.send('I am sending help your way! Please check your DMs. 👍')
+     message.reply('I am sending help your way! Please check your DMs. 👍')
      message.author.sendMessage("**Babu commands: **")
     message.author.sendMessage("The prefix for Babu is b!")
     message.author.sendMessage("help - Commands and help.")
