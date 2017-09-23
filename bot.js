@@ -53,6 +53,37 @@ const embedtest = {
   ]
 };
 
+const helpEmbed = {
+  "title": "Help system",
+  "description": "The prefix is bc!",
+  "color": 901366,
+  "timestamp": "2017-09-23T17:36:45.072Z",
+  "footer": {
+    "icon_url": "https://i.imgur.com/64xbGWQ.png",
+    "text": "Babu Help System"
+  },
+  "thumbnail": {
+    "url": "https://i.imgur.com/64xbGWQ.png"
+  },
+  "author": {
+    "name": "Babu (Canary)",
+    "url": "https://discordapp.com",
+    "icon_url": "https://i.imgur.com/64xbGWQ.png"
+  },
+  "fields": [
+    {
+      "name": "Information",
+      "value": "hq - Links to UQ & CL. \nhelp - See this message.\n",
+      "inline": true
+    },
+    {
+      "name": "Fun",
+      "value": "ping - The first of the first. \noof - Oof!\nreact - :thinking:\nilluminavi - Secret civilization.",
+      "inline": true
+    }
+  ]
+};
+
 // The ready event is vital, it means that your bot will only start reacting to information
 
 // from Discord _after_ ready is emitted
@@ -79,8 +110,13 @@ client.on('message', message => {
     message.reply('pong!');
 
   }
-
    if (message.content === 'bc!help') {
+     message.reply('I am sending help your way! Please check your DMs. 👍')
+     message.author.sendMessage("⚠️ Warning! You are using the CANARY BUILD. Things can go wrong at any time.")
+     message.author.sendMessage({embed: helpEmbed})
+     message.author.sendMessage("Can't see the help message? You can say bc-ne!help")
+   }
+   if (message.content === 'bc-ne!help') {
      message.react("⚠️")
      message.reply('I am sending help your way! Please check your DMs. 👍')
      message.author.sendMessage("⚠️ Warning! You are using the CANARY BUILD. Things can go wrong at any time.\nThe prefix is bc!\n**Babu commands: **\n")
