@@ -110,7 +110,7 @@ const deathOOF = {
 client.on('ready', () => {
 
   console.log('I am ready!');
-  client.user.setPresence({ status: 'online', game: { name: 'b!help | v.11.01', type: 0 } });
+  client.user.setPresence({ game: { name: 'b!help | v.11.01', type: 0 } });
 
 });
 
@@ -138,7 +138,7 @@ client.on('message', message => {
    if (message.content === 'b-ne!help') {
      message.react("👌")
      message.reply('I am sending help your way! Please check your DMs. 👍')
-     message.author.sendMessage("⚠️ Warning! You are using the CANARY BUILD. Things can go wrong at any time.\nThe prefix is b-ne!\n Prefix for embeds is b!\n**Babu commands: **\n")
+     message.author.sendMessage("The prefix is b-ne!\n Prefix for embeds is b!\n**Babu commands: **\n")
     message.author.sendMessage("help - Commands and help.")
     message.author.sendMessage("hq - Sends a DM with an invite to the CarLua and UQ discords. (can use b! without embed)")
      message.author.sendMessage("ping - Classics. (can use bc! without embed)")
