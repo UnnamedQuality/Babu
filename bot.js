@@ -51,9 +51,7 @@ client.on('message', message => {
    if (message.content === 'bc!help') {
      message.react("⚠️")
      message.reply('I am sending help your way! Please check your DMs. 👍')
-     message.author.sendMessage("⚠️ Warning! You are using the CANARY BUILD. Things can go wrong at any time.")
-     message.author.sendMessage("**Babu commands: **")
-    message.author.sendMessage("The prefix for the canary builds is bc!")
+     message.author.sendMessage("⚠️ Warning! You are using the CANARY BUILD. Things can go wrong at any time.\nThe prefix is bc!\n**Babu commands: **\n")
     message.author.sendMessage("help - Commands and help.")
     message.author.sendMessage("hq - Sends a DM with an invite to the CarLua and UQ discords.")
      message.author.sendMessage("ping - Classics.")
