@@ -84,6 +84,25 @@ const helpEmbed = {
   ]
 };
 
+const deathOOF = {
+  "title": "Roblox death sound",
+  "description": "Oof!",
+  "color": 15864217,
+  "timestamp": "2017-09-23T17:54:42.959Z",
+  "footer": {
+    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "text": "The result of OOF is your doom."
+  },
+  "image": {
+    "url": "https://i.imgur.com/EXSdJ9l.png"
+  },
+  "author": {
+    "name": "TheDoomOfDeathzzxfeifvh",
+    "url": "https://discordapp.com",
+    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+  }
+};
+
 // The ready event is vital, it means that your bot will only start reacting to information
 
 // from Discord _after_ ready is emitted
@@ -119,13 +138,13 @@ client.on('message', message => {
    if (message.content === 'bc-ne!help') {
      message.react("⚠️")
      message.reply('I am sending help your way! Please check your DMs. 👍')
-     message.author.sendMessage("⚠️ Warning! You are using the CANARY BUILD. Things can go wrong at any time.\nThe prefix is bc!\n**Babu commands: **\n")
+     message.author.sendMessage("⚠️ Warning! You are using the CANARY BUILD. Things can go wrong at any time.\nThe prefix is bc-ne!\n Prefix for embeds is bc!\n**Babu commands: **\n")
     message.author.sendMessage("help - Commands and help.")
-    message.author.sendMessage("hq - Sends a DM with an invite to the CarLua and UQ discords.")
-     message.author.sendMessage("ping - Classics.")
-     message.author.sendMessage("illuminavi - ILLUMINAVI!!")
-     message.author.sendMessage("hello - Why can't I introduce myself?")
-     message.author.sendMessage("react - 🤔")
+    message.author.sendMessage("hq - Sends a DM with an invite to the CarLua and UQ discords. (can use bc! without embed)")
+     message.author.sendMessage("ping - Classics. (can use bc! without embed)")
+     message.author.sendMessage("illuminavi - ILLUMINAVI!! (can use bc! without embed)")
+     message.author.sendMessage("hello - Why can't I introduce myself? (can use bc! without embed)")
+     message.author.sendMessage("react - 🤔 (can use bc! without embed)")
      message.author.sendMessage("**Babu FUN Commands: **\n oof- Oof! Requested by muhammed#3243.")
  
    }
@@ -159,6 +178,10 @@ client.on('message', message => {
     message.reply("u has discovered hidden secrets!\n here are mai emojissss!!!")
   }
   if (message.content === "bc!oof") {
+    message.react("💀")
+    message.reply({ embed: deathOOF })
+  }
+  if (message.content === "bc-ne!oof") {
     message.react("💀")
     message.reply("oof! https://i.imgur.com/EXSdJ9l.png")
   }
