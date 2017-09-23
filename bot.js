@@ -126,8 +126,9 @@ client.on('message', message => {
     message.react("💀")
     message.reply("oof! https://i.imgur.com/EXSdJ9l.png")
   }
-  if (message.content === "em!bed-test") {
-    message.channel.send({ embedtest })
+  if (message.content === "bc!embed-test") {
+    message.channel.send({ embed: embedtest })
+    message.channel.send('Text-only fallback')
   }
 });
 
