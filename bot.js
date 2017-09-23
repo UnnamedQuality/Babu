@@ -79,6 +79,16 @@ client.on('message', message => {
   if (message.content === "b!react") {
     message.react("😂")
   }
+  if (message.content === "b!pong") {
+    message.react("🔔")
+    message.react("😂")
+    message.react("🔥")
+    message.react("😧")
+    message.react("👌")
+    message.react("🤔")
+    message.react("👍")
+    message.reply("u has discovered hidden secrets!\n here are mai emojissss!!!")
+  }
 });
 
 // THIS  MUST  BE  THIS  WAY
