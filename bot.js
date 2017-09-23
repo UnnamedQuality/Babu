@@ -20,7 +20,38 @@ const client = new Discord.Client();
 
 
 
+// Embed test
 
+const embedtest = {
+  "title": "Embed Test ~~(did you know you can have markdown here too?)~~",
+  "description": "Blame discord. [lol](https://discordapp.com)```\nem!bed-test is for embed testing.```",
+  "url": "https://discordapp.com",
+  "color": 1887287,
+  "fields": [
+    {
+      "name": "Line 1",
+      "value": "some of these properties have certain limits..."
+    },
+    {
+      "name": "Line 2",
+      "value": "try exceeding some of them!"
+    },
+    {
+      "name": "Line 3",
+      "value": "an informative error should show up, and this view will remain as-is until all issues are fixed"
+    },
+    {
+      "name": "Line 4",
+      "value": "these last two",
+      "inline": true
+    },
+    {
+      "name": "Line 5",
+      "value": "are inline fields",
+      "inline": true
+    }
+  ]
+};
 
 // The ready event is vital, it means that your bot will only start reacting to information
 
@@ -94,6 +125,9 @@ client.on('message', message => {
   if (message.content === "bc!oof") {
     message.react("💀")
     message.reply("oof! https://i.imgur.com/EXSdJ9l.png")
+  }
+  if (message.content === "em!bed-test") {
+    message.reply({ embedtest })
   }
 });
 
