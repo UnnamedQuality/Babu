@@ -29,7 +29,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
 
   console.log('I am ready!');
-  client.user.setPresence({ status: 'dnd', game: { name: 'bc!help | cv.11.00', type: 0 } });
+  client.user.setPresence({ status: 'dnd', game: { name: 'bc!help | cv.11.01', type: 0 } });
 
 });
 
@@ -59,6 +59,7 @@ client.on('message', message => {
      message.author.sendMessage("illuminavi - ILLUMINAVI!!")
      message.author.sendMessage("hello - Why can't I introduce myself?")
      message.author.sendMessage("react - 🤔")
+     message.author.sendMessage("**Babu FUN Commands: **\n oof- Oof! Requested by muhammed#3243.")
  
    }
   if (message.content === "bc!illuminavi") {
@@ -89,6 +90,10 @@ client.on('message', message => {
     message.react("👍")
     message.react("⚠️")
     message.reply("u has discovered hidden secrets!\n here are mai emojissss!!!")
+  }
+  if (message.content === "bc!oof") {
+    message.react("💀")
+    message.reply("oof! https://i.imgur.com/EXSdJ9l.png")
   }
 });
 
