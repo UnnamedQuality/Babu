@@ -113,7 +113,7 @@ client.on('message', message => {
    if (message.content === 'bc!help') {
      message.reply('I am sending help your way! Please check your DMs. 👍')
      message.author.sendMessage("⚠️ Warning! You are using the CANARY BUILD. Things can go wrong at any time.")
-     message.author.sendMessage({embed: helpEmbed})
+     message.author.sendMessage({ embed: helpEmbed })
      message.author.sendMessage("Can't see the help message? You can say bc-ne!help")
    }
    if (message.content === 'bc-ne!help') {
