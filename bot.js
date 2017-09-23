@@ -29,6 +29,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
 
   console.log('I am ready!');
+  client.user.setPresence({ game: { name: 'bc!help | cv.11.00', type: 0 } });
 
 });
 
