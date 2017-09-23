@@ -40,7 +40,7 @@ client.on('message', message => {
 
   // If the message is "ping"
 
-  if (message.content === 'b!ping') {
+  if (message.content === 'bc!ping') {
 
     // Send "pong" to the same channel
 
@@ -48,11 +48,12 @@ client.on('message', message => {
 
   }
 
-   if (message.content === 'b!help') {
-     message.react("👌")
+   if (message.content === 'bc!help') {
+     message.react("⚠️")
      message.reply('I am sending help your way! Please check your DMs. 👍')
+     message.author.sendMessage("⚠️ Warning! You are using the CANARY BUILD. Things can go wrong at any time.")
      message.author.sendMessage("**Babu commands: **")
-    message.author.sendMessage("The prefix for Babu is b!")
+    message.author.sendMessage("The prefix for the canary builds is bc!")
     message.author.sendMessage("help - Commands and help.")
     message.author.sendMessage("hq - Sends a DM with an invite to the CarLua and UQ discords.")
      message.author.sendMessage("ping - Classics.")
@@ -61,25 +62,25 @@ client.on('message', message => {
      message.author.sendMessage("react - 🤔")
  
    }
-  if (message.content === "b!illuminavi") {
+  if (message.content === "bc!illuminavi") {
     message.react("😧")
     message.channel.send("ILLUMINAVI CONFIRMED! https://i.imgur.com/92wjqvK.png")
 }
-  if (message.content === "b!hello") {
+  if (message.content === "bc!hello") {
     message.channel.send("Hi, I am Jen, alias Babu. I am here to preform commands for you! I was set to preform by Carson Houdek and lua_html.")
       }
-  if (message.content === "b!hq") {
+  if (message.content === "bc!hq") {
     message.react("🔥")
     message.author.sendMessage("**CarLua HQ:** https://discord.gg/aKKwVEG")
     message.author.sendMessage("**UnnamedQuality:** https://discord.gg/c4yGwuQ")
       }
-  if (message.content === "b!abuintro") {
+  if (message.content === "bc!abuintro") {
     message.channel.send("Oh, it is my turn to preform? Well, thank you!\n Hello! I am Babu, real name Jen. This is my showroom, where I am supposed to preform!\n Say b!community to view community commands, for this server only. Thank you! 🔥")
   }
-  if (message.content === "b!react") {
+  if (message.content === "bc!react") {
     message.react("😂")
   }
-  if (message.content === "b!pong") {
+  if (message.content === "bc!pong") {
     message.react("🔔")
     message.react("😂")
     message.react("🔥")
@@ -87,6 +88,7 @@ client.on('message', message => {
     message.react("👌")
     message.react("🤔")
     message.react("👍")
+    message.react("⚠️")
     message.reply("u has discovered hidden secrets!\n here are mai emojissss!!!")
   }
 });
