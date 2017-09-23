@@ -127,7 +127,7 @@ client.on('message', message => {
     message.reply("oof! https://i.imgur.com/EXSdJ9l.png")
   }
   if (message.content === "em!bed-test") {
-    message.reply({ embedtest })
+    message.channel.send({ embedtest })
   }
 });
 
