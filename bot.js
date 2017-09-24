@@ -22,6 +22,27 @@ const client = new Discord.Client();
 
 // Embed test
 
+const doritoerror = {
+  "title": "Sorry!",
+  "description": "This command is only available in Dorito's Land at this moment.",
+  "color": 14510907,
+  "timestamp": "2017-09-24T16:19:35.333Z",
+  "footer": {
+    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "text": "Babu c:"
+  },
+  "thumbnail": {
+    "url": "http://assets.nydailynews.com/polopoly_fs/1.1997367.1415033522!/img/httpImage/image.jpg_gen/derivatives/article_970/doritos4n-2-web.jpg"
+  },
+  "image": {
+    "url": "https://tse3.mm.bing.net/th?id=OIP.G-5SI73CI82Ku92zlOiugAEMDp&pid=15.1&P=0&w=227&h=198"
+  },
+  "author": {
+    "name": "PizzaVoteForBest#0128",
+    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+  }
+};
+
 const Drownedembed = {
   "title": "Oh no.",
   "description": "You have drowned!",
@@ -106,7 +127,7 @@ const helpEmbed = {
     },
     {
       "name": "Tools",
-      "value": "gold - Get a **helpful** Discord Gold message.",
+      "value": "gold - Get a **helpful** Discord Gold message.\nchips - Get the chips.",
       "inline": true
     }
   ]
@@ -289,6 +310,9 @@ client.on('message', message => {
   }
   if (message.content === "bc!gold") {
     message.reply({ embed: DiscordGoldError })
+  }
+  if (message.content === "bc!chips") {
+    message.reply({ embed: doritoerror })
   }
   if (message.content === "bc-ne!lennyoof") {
     message.reply("lenny oof")
