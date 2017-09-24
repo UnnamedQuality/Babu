@@ -78,7 +78,7 @@ const helpEmbed = {
     },
     {
       "name": "Fun",
-      "value": "ping - The first of the first. \noof - Oof!\nreact - :thinking:\nilluminavi - Secret civilization.\nnoob - lel\n",
+      "value": "ping - The first of the first. \noof - Oof!\nreact - :thinking:\nilluminavi - Secret civilization.\nnoob - lel\nlennyoof - **NSFW** Lenny oof.",
       "inline": true
     }
   ]
@@ -120,6 +120,29 @@ const noobembed = {
   },
   "author": {
     "name": "My Noob!",
+    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+  }
+};
+
+const lennyOOFembed = {
+  "title": "Lenny...",
+  "description": "oof!",
+  "url": "https://cdn.discordapp.com/attachments/360538338664644608/361531801036128266/Screen_Shot_2017-09-24_at_9.23.41_AM.png",
+  "color": 10912508,
+  "timestamp": "2017-09-24T15:21:05.234Z",
+  "footer": {
+    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "text": "footer lennys"
+  },
+  "thumbnail": {
+    "url": "https://cdn.discordapp.com/embed/avatars/0.png"
+  },
+  "image": {
+    "url": "https://cdn.discordapp.com/attachments/360538338664644608/361531801036128266/Screen_Shot_2017-09-24_at_9.23.41_AM.png"
+  },
+  "author": {
+    "name": "lenny feck",
+    "url": "https://cdn.discordapp.com/attachments/360538338664644608/361531801036128266/Screen_Shot_2017-09-24_at_9.23.41_AM.png",
     "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
   }
 };
@@ -167,7 +190,7 @@ client.on('message', message => {
      message.author.sendMessage("illuminavi - ILLUMINAVI!! (can use bc! without embed)")
      message.author.sendMessage("hello - Why can't I introduce myself? (can use bc! without embed)")
      message.author.sendMessage("react - 🤔 (can use bc! without embed)")
-     message.author.sendMessage("**Babu FUN Commands: **\n oof- Oof! Requested by muhammed#3243.\n noob - LIVING LIFE OF NOOB I USE MAI GUN")
+     message.author.sendMessage("**Babu FUN Commands: **\n oof- Oof! Requested by muhammed#3243.\n noob - LIVING LIFE OF NOOB I USE MAI GUN\n lennyoof - **NSFW**")
  
    }
   if (message.content === "bc!illuminavi") {
@@ -209,6 +232,12 @@ client.on('message', message => {
   }
   if (message.content === "bc!noob") {
     message.reply({ embed: noobembed })
+  }
+  if (message.content === "bc!lennyoof") {
+    message.reply({ embed: lennyOOFembed })
+  }
+  if (message.content === "bc-ne!lennyoof") {
+    message.reply("lenny oof")
   }
   if (message.content === "bc-ne!noob") {
     message.reply("You are a noob. Here is a picture of you. https://i.imgur.com/VMKuy8E.png")
