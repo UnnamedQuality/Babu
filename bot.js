@@ -78,7 +78,7 @@ const helpEmbed = {
     },
     {
       "name": "Fun",
-      "value": "ping - The first of the first. \noof - Oof!\nreact - :thinking:\nilluminavi - Secret civilization.",
+      "value": "ping - The first of the first. \noof - Oof!\nreact - :thinking:\nilluminavi - Secret civilization.\nnoob - lel",
       "inline": true
     }
   ]
@@ -110,7 +110,7 @@ const deathOOF = {
 client.on('ready', () => {
 
   console.log('I am ready!');
-  client.user.setPresence({ status: 'dnd', game: { name: 'bc!help | cv.11.01', type: 0 } });
+  client.user.setPresence({ status: 'dnd', game: { name: 'bc!help | cv.11.02', type: 0 } });
 
 });
 
@@ -130,6 +130,7 @@ client.on('message', message => {
 
   }
    if (message.content === 'bc!help') {
+     message.react("⚠️")
      message.reply('I am sending help your way! Please check your DMs. 👍')
      message.author.sendMessage("⚠️ Warning! You are using the CANARY BUILD. Things can go wrong at any time.")
      message.author.sendMessage({ embed: helpEmbed })
@@ -145,7 +146,7 @@ client.on('message', message => {
      message.author.sendMessage("illuminavi - ILLUMINAVI!! (can use bc! without embed)")
      message.author.sendMessage("hello - Why can't I introduce myself? (can use bc! without embed)")
      message.author.sendMessage("react - 🤔 (can use bc! without embed)")
-     message.author.sendMessage("**Babu FUN Commands: **\n oof- Oof! Requested by muhammed#3243.")
+     message.author.sendMessage("**Babu FUN Commands: **\n oof- Oof! Requested by muhammed#3243.\n noob - LIVING LIFE OF NOOB I USE MAI GUN")
  
    }
   if (message.content === "bc!illuminavi") {
@@ -185,6 +186,9 @@ client.on('message', message => {
     message.react("💀")
     message.reply("oof! https://i.imgur.com/EXSdJ9l.png")
   }
+  if (message.content === "bc!noob") {
+    
+   }
   if (message.content === "bc!embed-test") {
     message.channel.send({ embed: embedtest })
     message.channel.send('Text-only fallback')
