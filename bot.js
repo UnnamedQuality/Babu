@@ -22,6 +22,29 @@ const client = new Discord.Client();
 
 // Embed test
 
+const Drownedembed = {
+  "title": "Oh no.",
+  "description": "You have drowned!",
+  "url": "https://cdn.discordapp.com/attachments/358977322214359042/361538590968381440/RobloxScreenShot20170924_174301142.png",
+  "color": 14830710,
+  "timestamp": "2017-09-24T15:49:15.835Z",
+  "footer": {
+    "icon_url": "https://t4.rbxcdn.com/160a228368a9f46ee8b9c0a06e975afb",
+    "text": "You have drowned."
+  },
+  "thumbnail": {
+    "url": "https://t4.rbxcdn.com/160a228368a9f46ee8b9c0a06e975afb"
+  },
+  "image": {
+    "url": "https://cdn.discordapp.com/attachments/358977322214359042/361538590968381440/RobloxScreenShot20170924_174301142.png"
+  },
+  "author": {
+    "name": "muhammed#3243",
+    "url": "https://t4.rbxcdn.com/160a228368a9f46ee8b9c0a06e975afb",
+    "icon_url": "https://t4.rbxcdn.com/160a228368a9f46ee8b9c0a06e975afb"
+  }
+};
+
 const embedtest = {
   "title": "Embed Test ~~(did you know you can have markdown here too?)~~",
   "description": "Blame discord. [lol](https://discordapp.com)```\nem!bed-test is for embed testing.```",
@@ -141,11 +164,13 @@ const lennyOOFembed = {
     "url": "https://cdn.discordapp.com/attachments/360538338664644608/361531801036128266/Screen_Shot_2017-09-24_at_9.23.41_AM.png"
   },
   "author": {
-    "name": "lenny feck",
+    "name": "diamondboy5860/Morty#3990",
     "url": "https://cdn.discordapp.com/attachments/360538338664644608/361531801036128266/Screen_Shot_2017-09-24_at_9.23.41_AM.png",
     "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
   }
 };
+
+
 
 // The ready event is vital, it means that your bot will only start reacting to information
 
@@ -236,8 +261,14 @@ client.on('message', message => {
   if (message.content === "bc!lennyoof") {
     message.reply({ embed: lennyOOFembed })
   }
+  if (message.content === "bc!drowned") {
+    message.reply({ embed: Drownedembed })
+  }
   if (message.content === "bc-ne!lennyoof") {
     message.reply("lenny oof")
+  }
+   if (message.content === "bc-ne!drowned") {
+    message.reply("You have drowned.")
   }
   if (message.content === "bc-ne!noob") {
     message.reply("You are a noob. Here is a picture of you. https://i.imgur.com/VMKuy8E.png")
