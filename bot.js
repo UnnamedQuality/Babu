@@ -101,7 +101,7 @@ const helpEmbed = {
     },
     {
       "name": "Fun",
-      "value": "ping - The first of the first. \noof - Oof!\nreact - :thinking:\nilluminavi - Secret civilization.\nnoob - lel\nlennyoof - **NSFW** Lenny oof.",
+      "value": "ping - The first of the first. \noof - Oof!\nreact - :thinking:\nilluminavi - Secret civilization.\nnoob - lel\nlennyoof - **NSFW** Lenny oof.\ndrowned - You have drowned.",
       "inline": true
     }
   ]
@@ -215,7 +215,7 @@ client.on('message', message => {
      message.author.sendMessage("illuminavi - ILLUMINAVI!! (can use bc! without embed)")
      message.author.sendMessage("hello - Why can't I introduce myself? (can use bc! without embed)")
      message.author.sendMessage("react - 🤔 (can use bc! without embed)")
-     message.author.sendMessage("**Babu FUN Commands: **\n oof- Oof! Requested by muhammed#3243.\n noob - LIVING LIFE OF NOOB I USE MAI GUN\n lennyoof - **NSFW**")
+     message.author.sendMessage("**Babu FUN Commands: **\n oof- Oof! Requested by muhammed#3243.\n noob - LIVING LIFE OF NOOB I USE MAI GUN\n lennyoof - **NSFW**\ndrowned - Ben drowned.")
  
    }
   if (message.content === "bc!illuminavi") {
