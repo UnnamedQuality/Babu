@@ -103,6 +103,11 @@ const helpEmbed = {
       "name": "Fun",
       "value": "ping - The first of the first. \noof - Oof!\nreact - :thinking:\nilluminavi - Secret civilization.\nnoob - lel\nlennyoof - **NSFW** Lenny oof.\ndrowned - You have drowned.",
       "inline": true
+    },
+    {
+      "name": "Tools",
+      "value": "gold - Get a **helpful** Discord Gold message.",
+      "inline": true
     }
   ]
 };
@@ -166,6 +171,24 @@ const lennyOOFembed = {
   "author": {
     "name": "diamondboy5860/Morty#3990",
     "url": "https://cdn.discordapp.com/attachments/360538338664644608/361531801036128266/Screen_Shot_2017-09-24_at_9.23.41_AM.png",
+    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+  }
+};
+
+const DiscordGoldError = {
+  "description": "Sorry, you need [Discord Gold](discord.gold) to view this message.",
+  "color": 12824520,
+  "timestamp": "2017-09-24T16:08:23.098Z",
+  "footer": {
+    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "text": "Babu c:"
+  },
+  "thumbnail": {
+    "url": "https://cdn.discordapp.com/app-icons/271121829194629122/c35206c27b7085edfee31d6ba072f749.png"
+  },
+  "author": {
+    "name": "PizzaVoteForBest#0128",
+    "url": "https://discordapp.com",
     "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
   }
 };
@@ -263,6 +286,9 @@ client.on('message', message => {
   }
   if (message.content === "bc!drowned") {
     message.reply({ embed: Drownedembed })
+  }
+  if (message.content === "bc!gold") {
+    message.reply({ embed: DiscordGoldError })
   }
   if (message.content === "bc-ne!lennyoof") {
     message.reply("lenny oof")
