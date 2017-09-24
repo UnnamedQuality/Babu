@@ -78,7 +78,7 @@ const helpEmbed = {
     },
     {
       "name": "Fun",
-      "value": "ping - The first of the first. \noof - Oof!\nreact - :thinking:\nilluminavi - Secret civilization.\nnoob - lel",
+      "value": "ping - The first of the first. \noof - Oof!\nreact - :thinking:\nilluminavi - Secret civilization.\nnoob - lel\n",
       "inline": true
     }
   ]
@@ -99,6 +99,27 @@ const deathOOF = {
   "author": {
     "name": "TheDoomOfDeathzzxfeifvh",
     "url": "https://discordapp.com",
+    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+  }
+};
+
+const noobembed = {
+  "title": "You are...",
+  "description": "a noob. here's a picture of you. noob.",
+  "color": 3596514,
+  "timestamp": "2017-09-24T15:08:20.642Z",
+  "footer": {
+    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "text": "Your noob!?!?"
+  },
+  "thumbnail": {
+    "url": "https://cdn.discordapp.com/embed/avatars/0.png"
+  },
+  "image": {
+    "url": "https://i.imgur.com/VMKuy8E.png"
+  },
+  "author": {
+    "name": "My Noob!",
     "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
   }
 };
@@ -187,8 +208,11 @@ client.on('message', message => {
     message.reply("oof! https://i.imgur.com/EXSdJ9l.png")
   }
   if (message.content === "bc!noob") {
-    
-   }
+    message.reply({ embed: noobembed })
+  }
+  if (message.content === "bc-ne!noob") {
+    message.reply("You are a noob. Here is a picture of you. https://i.imgur.com/VMKuy8E.png")
+  }
   if (message.content === "bc!embed-test") {
     message.channel.send({ embed: embedtest })
     message.channel.send('Text-only fallback')
