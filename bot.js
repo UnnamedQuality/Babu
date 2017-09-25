@@ -24,7 +24,7 @@ const client = new Discord.Client();
 
 const delivery = {
   "title": "Cookies & Cream Inc.",
-  "description": "Here is your cookies and dream!",
+  "description": "Here is your cookies and cream!",
   "color": 5140965,
   "timestamp": "2017-09-25T22:39:07.665Z",
   "footer": {
