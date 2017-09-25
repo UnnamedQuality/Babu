@@ -22,6 +22,20 @@ const client = new Discord.Client();
 
 // Embed test
 
+const delivery = {
+  "title": "Cookies & Cream Inc.",
+  "description": "Here is your cookies and dream!",
+  "color": 5140965,
+  "timestamp": "2017-09-25T22:39:07.665Z",
+  "footer": {
+    "icon_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAPhvq67Li_1xmH8GtAwoE-WO6whJZWoNow6r-AROgWNrt5dqR",
+    "text": "Cookies and cream delivery (Suggested by TheClickersDiscord#2994)"
+  },
+  "thumbnail": {
+    "url": "http://www.chewoutloud.com/wp-content/uploads/2013/08/Cookies-n-Cream-Ice-Cream-2.jpg"
+  }
+};
+
 const doritoerror = {
   "title": "Sorry!",
   "description": "This command is only available in Dorito's Land at this moment.",
@@ -127,7 +141,7 @@ const helpEmbed = {
     },
     {
       "name": "Tools",
-      "value": "gold - Get a **helpful** Discord Gold message.\nchips - Get the chips.",
+      "value": "gold - Get a **helpful** Discord Gold message.\nchips - Get the chips.\ncnc - Cookies and cream. Get it today!",
       "inline": true
     }
   ]
@@ -294,6 +308,8 @@ client.on('message', message => {
   if (message.content === "bc!oof") {
     message.react("💀")
     message.reply({ embed: deathOOF })
+  }
+  if (message.content === "bc!cnc") {
   }
   if (message.content === "bc-ne!oof") {
     message.react("💀")
