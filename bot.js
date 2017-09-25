@@ -309,8 +309,6 @@ client.on('message', message => {
     message.react("💀")
     message.reply({ embed: deathOOF })
   }
-  if (message.content === "bc!cnc") {
-  }
   if (message.content === "bc-ne!oof") {
     message.react("💀")
     message.reply("oof! https://i.imgur.com/EXSdJ9l.png")
@@ -326,6 +324,10 @@ client.on('message', message => {
   }
   if (message.content === "bc!gold") {
     message.reply({ embed: DiscordGoldError })
+  }
+  if (message.content === "bc!cnc") {
+    message.react("🍱")
+    message.reply({ embed: delivery })
   }
   if (message.content === "bc!chips") {
     message.reply({ embed: doritoerror })
