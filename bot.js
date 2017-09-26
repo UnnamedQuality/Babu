@@ -36,7 +36,7 @@ const quire = {
   }
 };
 
-const trg = {
+const triggered = {
   "url": "https://giphy.com/gifs/ZEVc9uplCUJFu",
   "color": 213361,
   "timestamp": "2017-09-25T23:59:46.475Z",
@@ -348,8 +348,8 @@ client.on('message', message => {
   if (message.content === "bc!gold") {
     message.reply({ embed: DiscordGoldError })
   }
-  if (message.content === "bc!trg") {
-    message.reply({ embed: trg })
+  if (message.content === "bc!trig") {
+    message.reply({ embed: triggered })
   }
   if (message.content === "bc!ausch") {
     message.reply({ embed: quire })
