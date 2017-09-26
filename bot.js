@@ -22,6 +22,29 @@ const client = new Discord.Client();
 
 // Embed test
 
+const quire = {
+  "title": "Result",
+  "description": "Hitler did nothing wrong! Image found on Google.",
+  "color": 4407182,
+  "timestamp": "2017-09-25T23:55:27.800Z",
+  "footer": {
+    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "text": "ausch"
+  },
+  "image": {
+    "url": "https://www.ushmm.org/lcmedia/photo/wlc/image/90/90326.jpg"
+  }
+};
+
+const trg = {
+  "url": "https://giphy.com/gifs/ZEVc9uplCUJFu",
+  "color": 213361,
+  "timestamp": "2017-09-25T23:59:46.475Z",
+  "image": {
+    "url": "hhttps://giphy.com/gifs/ZEVc9uplCUJFu"
+  }
+};
+
 const delivery = {
   "title": "Cookies & Cream Inc.",
   "description": "Here is your cookies and cream!",
@@ -136,7 +159,7 @@ const helpEmbed = {
     },
     {
       "name": "Fun",
-      "value": "ping - The first of the first. \noof - Oof!\nreact - :thinking:\nilluminavi - Secret civilization.\nnoob - lel\nlennyoof - **NSFW** Lenny oof.\ndrowned - You have drowned.",
+      "value": "ping - The first of the first. \noof - Oof!\nreact - :thinking:\nilluminavi - Secret civilization.\nnoob - lel\nlennyoof - **NSFW** Lenny oof.\ndrowned - You have drowned.\nausch - **TRIGGER WARNING**",
       "inline": true
     },
     {
@@ -324,6 +347,12 @@ client.on('message', message => {
   }
   if (message.content === "bc!gold") {
     message.reply({ embed: DiscordGoldError })
+  }
+  if (message.content === "bc!trg") {
+    message.reply({ embed: trg })
+  }
+  if (message.content === "bc!ausch") {
+    message.reply({ embed: quire })
   }
   if (message.content === "bc!cnc") {
     message.react("🍱")
