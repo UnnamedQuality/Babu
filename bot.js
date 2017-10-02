@@ -378,11 +378,6 @@ client.on('message', message => {
     message.channel.send({ embed: embedtest })
     message.channel.send('Text-only fallback')
   }
-    if (message.content === "bc!shutdown" && message.author.id === 345330930120130571)) {
-    message.channel.send("Bar! Shutting down...");
-    client.destroy()
-    throw new Error("Owner shut down system.");
-  }
 });
 
 // THIS  MUST  BE  THIS  WAY
