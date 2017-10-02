@@ -271,7 +271,7 @@ client.on('ready', () => {
 client.on('message', message => {
   
   // Return if the message is either by: a bot, or in DMs
-if (!message.channel. || message.author.bot) return;
+  if (message.author.bot) return;
  if (message.channel.type === "dm") return;
   // If the message is "ping"
 
