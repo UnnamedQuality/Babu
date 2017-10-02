@@ -269,7 +269,10 @@ client.on('ready', () => {
 // Create an event listener for messages
 
 client.on('message', message => {
-
+  
+  // Return if the message is either by: a bot, or in DMs
+if (!message.channel. || message.author.bot) return;
+ if (message.channel.type === "dm") return;
   // If the message is "ping"
 
   if (message.content === 'bc!ping') {
@@ -286,7 +289,8 @@ client.on('message', message => {
      message.author.sendMessage({ embed: helpEmbed })
      message.author.sendMessage("Can't see the help message? You can say bc-ne!help")
    }
-   if (message.content === 'bc-ne!help') {
+
+  if (message.content === 'bc-ne!help') {
      message.react("⚠️")
      message.reply('I am sending help your way! Please check your DMs. 👍')
      message.author.sendMessage("⚠️ Warning! You are using the CANARY BUILD. Things can go wrong at any time.\nThe prefix is bc-ne!\n Prefix for embeds is bc!\n**Babu commands: **\n")
@@ -373,6 +377,11 @@ client.on('message', message => {
   if (message.content === "bc!embed-test") {
     message.channel.send({ embed: embedtest })
     message.channel.send('Text-only fallback')
+  }
+    if (message.content === "bc!shutdown" && message.author.id === 345330930120130571)) {
+    message.channel.send("Bar! Shutting down...");
+    client.destroy()
+    throw new Error("Owner shut down system.");
   }
 });
 
