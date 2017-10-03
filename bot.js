@@ -272,7 +272,7 @@ client.on('message', message => {
   
   // Return if the message is either by: a bot, or in DMs
   if (message.author.bot) return;
- if (!message.content === "b!help" && message.channel.type === "dm") return;
+ if (message.channel.type === "dm") return;
   // If the message is "ping"
 
   if (message.content === 'b!ping') {
@@ -285,7 +285,6 @@ client.on('message', message => {
    if (message.content === 'b!help') {
      message.react("👌")
      message.reply('I am sending help your way! Please check your DMs. 👍')
-     message.author.sendMessage("⚠️ Warning! You are using the CANARY BUILD. Things can go wrong at any time.")
      message.author.sendMessage({ embed: helpEmbed })
      message.author.sendMessage("Can't see the help message? You can say bc-ne!help")
    }
@@ -293,12 +292,11 @@ client.on('message', message => {
   if (message.content === 'b-ne!help') {
      message.react("👌")
      message.reply('I am sending help your way! Please check your DMs. 👍')
-     message.author.sendMessage("⚠️ Warning! You are using the CANARY BUILD. Things can go wrong at any time.\nThe prefix is bc-ne!\n Prefix for embeds is bc!\n**Babu commands: **\n")
     message.author.sendMessage("help - Commands and help.")
-    message.author.sendMessage("hq - Sends a DM with an invite to the CarLua and UQ discords. (can use bc! without embed)")
+    message.author.sendMessage("hq - Sends a DM with an invite to the CarLua and UQ discords. (can use b! without embed)")
      message.author.sendMessage("ping - Classics. (can use bc! without embed)")
      message.author.sendMessage("illuminavi - ILLUMINAVI!! (can use bc! without embed)")
-     message.author.sendMessage("hello - Why can't I introduce myself? (can use bc! without embed)")
+     message.author.sendMessage("hello - Why can't I introduce myself? (can use b! without embed)")
      message.author.sendMessage("react - 🤔 (can use bc! without embed)")
      message.author.sendMessage("**Babu FUN Commands: **\n oof- Oof! Requested by muhammed#3243.\n noob - LIVING LIFE OF NOOB I USE MAI GUN\n lennyoof - **NSFW**\ndrowned - Ben drowned.")
  
