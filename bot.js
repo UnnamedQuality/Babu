@@ -13,12 +13,9 @@
 const Discord = require('discord.js');
 
 
-
 // Create an instance of a Discord client
 
 const client = new Discord.Client();
-
-
 
 // Embed test
 
@@ -136,7 +133,7 @@ const embedtest = {
 
 const helpEmbed = {
   "title": "Help system",
-  "description": "The prefix is bc!",
+  "description": "The prefix is b!",
   "color": 901366,
   "timestamp": "2017-09-23T17:36:45.072Z",
   "footer": {
@@ -147,7 +144,7 @@ const helpEmbed = {
     "url": "https://i.imgur.com/64xbGWQ.png"
   },
   "author": {
-    "name": "Babu (Canary)",
+    "name": "Babu",
     "url": "https://discordapp.com",
     "icon_url": "https://i.imgur.com/64xbGWQ.png"
   },
@@ -250,7 +247,6 @@ const DiscordGoldError = {
     "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
   }
 };
-
 
 
 // The ready event is vital, it means that your bot will only start reacting to information
@@ -704,7 +700,6 @@ client.on('message', message => {
     message.react("👌")
     message.react("🤔")
     message.react("👍")
-    message.react("⚠️")
     message.reply("u has discovered hidden secrets!\n here are mai emojissss!!!")
   }
   if (message.content === "b!oof") {
